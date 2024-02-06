@@ -26,51 +26,53 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    // var myText by remember { mutableStateOf("") }
-                    /*Column {
-                        MyTextFieldStateless(myText) { myText = it }
-                    }*/
-                    val myOptions = getOptions(listOf("perro", "gato", "raton"))
-                    var selected by rememberSaveable { mutableStateOf("1") }
-                    Column {
-                        /*myOptions.forEach {
-                            CheckboxMultipleInstances(it)
-                        }*/
-                        //MyCheckboxWithText()
-                        //MyRadioButton()
-                        //MyRadioButtonAdvance(selected) { selected = it }
-                        MyCard()
-                        MyBadgeBox()
-                        MyDropdownMenu()
-                        MySlider()
-                        MySliderAdvanced()
-                        var showDialog by rememberSaveable {
-                            mutableStateOf(false)
-                        }
-                        Button(onClick = { showDialog = true }) {
-                            Text(text = "Show dialog")
-                        }
-                        /*MyAlertDialog(
-                            showDialog = showDialog,
-                            onDismiss = { showDialog = false },
-                            onConfirm = { showDialog = false }
-                        )*/
-                        /*MyPersonalizedDialog(
-                            showDialog = showDialog,
-                            onDismiss = { showDialog = false },
-                            onConfirm = { showDialog = false }
-                        )*/
-                        MyCustomComplexDialog(
-                            showDialog = showDialog,
-                            onDismiss = { showDialog = false }
-                        )
-                        MyConfirmationDialog(
-                            showDialog = showDialog,
-                            onDismiss = { showDialog = false }
-                        )
-                    }
+
                 }
             }
         }
     }
 }
+
+/*var myText by remember { mutableStateOf("") }
+Column {
+    MyTextFieldStateless(myText) { myText = it }
+}
+val myOptions = getOptions(listOf("perro", "gato", "raton"))
+var selected by rememberSaveable { mutableStateOf("1") }
+Column {
+    myOptions.forEach {
+        CheckboxMultipleInstances(it)
+    }
+    //MyCheckboxWithText()
+    //MyRadioButton()
+    //MyRadioButtonAdvance(selected) { selected = it }
+    MyCard()
+    MyBadgeBox()
+    MyDropdownMenu()
+    MySlider()
+    MySliderAdvanced()
+    var showDialog by rememberSaveable {
+        mutableStateOf(false)
+    }
+    Button(onClick = { showDialog = true }) {
+        Text(text = "Show dialog")
+    }
+    MyAlertDialog(
+        showDialog = showDialog,
+        onDismiss = { showDialog = false },
+        onConfirm = { showDialog = false }
+    )
+    MyPersonalizedDialog(
+        showDialog = showDialog,
+        onDismiss = { showDialog = false },
+        onConfirm = { showDialog = false }
+    )
+    MyCustomComplexDialog(
+        showDialog = showDialog,
+        onDismiss = { showDialog = false }
+    )
+    MyConfirmationDialog(
+        showDialog = showDialog,
+        onDismiss = { showDialog = false }
+    )
+}*/
