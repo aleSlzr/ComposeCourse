@@ -1,4 +1,4 @@
-package com.example.composecourse
+package com.example.composecourse.components
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import com.example.composecourse.R
 
 @Composable
 fun MyConfirmationDialog(showDialog: Boolean, onDismiss: () -> Unit) {

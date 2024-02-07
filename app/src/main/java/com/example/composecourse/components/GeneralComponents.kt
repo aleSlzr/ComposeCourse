@@ -1,4 +1,4 @@
-package com.example.composecourse
+package com.example.composecourse.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -63,6 +63,8 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.example.composecourse.CheckboxObject
+import com.example.composecourse.R
 
 @Composable
 fun MyDropdownMenu() {
