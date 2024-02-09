@@ -1,4 +1,4 @@
-package com.example.composecourse
+package com.example.composecourse.model
 
 data class CheckboxObject(
     val title: String,

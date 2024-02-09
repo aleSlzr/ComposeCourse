@@ -16,6 +16,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.composecourse.components.ItemTwitter
 import com.example.composecourse.components.LoginScreen
+import com.example.composecourse.components.SuperHeroRecycler
+import com.example.composecourse.components.SuperHeroRecyclerExtraControls
+import com.example.composecourse.components.SuperHeroRecyclerGrid
+import com.example.composecourse.components.SuperHeroRecyclerSticky
 import com.example.composecourse.ui.theme.ComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -29,7 +33,11 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background,
                 ) {
                     // LoginScreen()
-                    ItemTwitter()
+                    //ItemTwitter()
+                    //SuperHeroRecycler()
+                    //SuperHeroRecyclerGrid()
+                    //SuperHeroRecyclerExtraControls()
+                    SuperHeroRecyclerSticky()
                 }
             }
         }

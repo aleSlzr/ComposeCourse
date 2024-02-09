@@ -63,7 +63,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.example.composecourse.CheckboxObject
+import com.example.composecourse.model.CheckboxObject
 import com.example.composecourse.R
 
 @Composable
