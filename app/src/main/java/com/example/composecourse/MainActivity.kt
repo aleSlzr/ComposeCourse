@@ -16,6 +16,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import com.example.composecourse.components.ItemTwitter
 import com.example.composecourse.components.LoginScreen
+import com.example.composecourse.components.ScaffoldExample
 import com.example.composecourse.components.SuperHeroRecycler
 import com.example.composecourse.components.SuperHeroRecyclerExtraControls
 import com.example.composecourse.components.SuperHeroRecyclerGrid
@@ -37,7 +38,8 @@ class MainActivity : ComponentActivity() {
                     //SuperHeroRecycler()
                     //SuperHeroRecyclerGrid()
                     //SuperHeroRecyclerExtraControls()
-                    SuperHeroRecyclerSticky()
+                    //SuperHeroRecyclerSticky()
+                    ScaffoldExample()
                 }
             }
         }
