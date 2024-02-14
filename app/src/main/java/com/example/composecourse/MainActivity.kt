@@ -3,24 +3,21 @@ package com.example.composecourse
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.example.composecourse.components.ItemTwitter
-import com.example.composecourse.components.LoginScreen
-import com.example.composecourse.components.ScaffoldExample
-import com.example.composecourse.components.SuperHeroRecycler
-import com.example.composecourse.components.SuperHeroRecyclerExtraControls
-import com.example.composecourse.components.SuperHeroRecyclerGrid
-import com.example.composecourse.components.SuperHeroRecyclerSticky
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.example.composecourse.components.Screen1
+import com.example.composecourse.components.Screen2
+import com.example.composecourse.components.Screen3
+import com.example.composecourse.components.Screen4
+import com.example.composecourse.components.Screen5
+import com.example.composecourse.model.Routes
 import com.example.composecourse.ui.theme.ComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -39,7 +36,34 @@ class MainActivity : ComponentActivity() {
                     //SuperHeroRecyclerGrid()
                     //SuperHeroRecyclerExtraControls()
                     //SuperHeroRecyclerSticky()
-                    ScaffoldExample()
+                    //ScaffoldExample()
+                    val navigationController = rememberNavController()
+                    NavHost(
+                        navController = navigationController,
+                        startDestination = Routes.Screen1.route
+                    ) {
+                        composable(Routes.Screen1.route) { Screen1(navigationController) }
+                        composable(Routes.Screen2.route) { Screen2(navigationController) }
+                        composable(Routes.Screen3.route) { Screen3(navigationController) }
+                        composable(
+                            Routes.Screen4.route,
+                            arguments = listOf(navArgument("age") { type = NavType.IntType })
+                        ) { backStackEntry ->
+                            Screen4(
+                                navigationController,
+                                backStackEntry.arguments?.getInt("age") ?: 0
+                            )
+                        }
+                        composable(
+                            Routes.Screen5.route,
+                            arguments = listOf(navArgument("name") { defaultValue = "Alia" })
+                        ) { backStackEntry ->
+                            Screen5(
+                                navigationController,
+                                backStackEntry.arguments?.getString("name").orEmpty()
+                            )
+                        }
+                    }
                 }
             }
         }
