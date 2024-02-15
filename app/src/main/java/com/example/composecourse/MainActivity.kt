@@ -7,17 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavType
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
-import com.example.composecourse.components.Screen1
-import com.example.composecourse.components.Screen2
-import com.example.composecourse.components.Screen3
-import com.example.composecourse.components.Screen4
-import com.example.composecourse.components.Screen5
-import com.example.composecourse.model.Routes
+import com.example.composecourse.login.LoginScreen
+import com.example.composecourse.login.LoginViewModel
 import com.example.composecourse.ui.theme.ComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,14 +21,14 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    // LoginScreen()
+                    LoginScreen(LoginViewModel())
                     //ItemTwitter()
                     //SuperHeroRecycler()
                     //SuperHeroRecyclerGrid()
                     //SuperHeroRecyclerExtraControls()
                     //SuperHeroRecyclerSticky()
                     //ScaffoldExample()
-                    val navigationController = rememberNavController()
+                    /*val navigationController = rememberNavController()
                     NavHost(
                         navController = navigationController,
                         startDestination = Routes.Screen1.route
@@ -63,7 +54,7 @@ class MainActivity : ComponentActivity() {
                                 backStackEntry.arguments?.getString("name").orEmpty()
                             )
                         }
-                    }
+                    }*/
                 }
             }
         }
