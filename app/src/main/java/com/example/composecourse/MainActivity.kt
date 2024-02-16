@@ -7,8 +7,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.composecourse.login.LoginScreen
-import com.example.composecourse.login.LoginViewModel
+import com.example.composecourse.login.ui.LoginScreen
+import com.example.composecourse.login.ui.LoginViewModel
 import com.example.composecourse.ui.theme.ComposeCourseTheme
 
 class MainActivity : ComponentActivity() {
