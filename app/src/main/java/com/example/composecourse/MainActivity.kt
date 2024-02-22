@@ -8,6 +8,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import com.example.composecourse.components.ColorAnimationSimple
+import com.example.composecourse.components.CrossFadeExampleAnimation
+import com.example.composecourse.components.SizeAnimation
+import com.example.composecourse.components.VisibilityAnimation
 import com.example.composecourse.login.ui.LoginScreen
 import com.example.composecourse.login.ui.LoginViewModel
 import com.example.composecourse.ui.theme.ComposeCourseTheme
@@ -24,10 +28,13 @@ class MainActivity : ComponentActivity() {
             ComposeCourseTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
                 ) {
-                    LoginScreen(loginViewModel)
+                    //ColorAnimationSimple()
+                    //SizeAnimation()
+                    //VisibilityAnimation()
+                    CrossFadeExampleAnimation()
+                    //LoginScreen(loginViewModel)
                     //ItemTwitter()
                     //SuperHeroRecycler()
                     //SuperHeroRecyclerGrid()
